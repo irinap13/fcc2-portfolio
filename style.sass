@@ -43,7 +43,7 @@ body
 	&#about
 		h2
 			text-align: right
-	
+
 	&#portfolio
 		background-color: rgba(#FFFFD4,.4)
 		border-radius: 5px
@@ -53,17 +53,45 @@ body
 			hr
 				background-color: #FF6F69
 				border-color: #FF6F69
+		.content-block
+			margin: 0
+			padding: 10px
+			height: 190px
 		a
+			position: relative
+			box-shadow: 0 0 5px rgba(#000,.05)
 			&:link,&:visited,&:hover,&:active
-				margin: 10px 0
-				color: #FF6F69
-				text-align: center
+				color: #fff
 				text-decoration: none
-				display: inline-block
-				img
-					max-width: 100%
-					border: 3px solid #fff
-	
+				display: block
+			img
+				max-width: 100%
+				//border: 3px solid #fff
+			h3
+				position: absolute
+				top: 0px
+				left: 10px
+				color: #fff
+				display: none
+				margin-top: 10px
+				span
+					font-weight: bold
+					font-size: .85em
+			&:hover
+				h3
+					display: block
+					z-index: 10
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					z-index: 5
+					background-color: rgba(#000,.5)
+
 	&#contact
 		input, textarea
 			display: block
